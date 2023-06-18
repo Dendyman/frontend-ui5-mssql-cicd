@@ -8,6 +8,10 @@ service:
   dockerConfigJsonSecretTextCredentialsId: "dockercred"
   Acceptance:
     kubeConfigSecretTextCredentialsId: "kymacred"
+  stages:
+    Acceptance:
+      runFirst:
+        command: "kubectl krew install oidc-login"
 steps:
   kanikoExecute:
     dockerfilePath: "docker/Dockerfile"
