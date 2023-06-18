@@ -3,7 +3,7 @@ general:
   containerImageName: "afdendy/fe-ui5-mssql"
   containerRegistryUrl: "https://hub.docker.com/repositories/afdendy"
 service:
-  automaticVersioning: true
+  automaticVersioning: false
   dockerConfigJsonSecretTextCredentialsId: "dockercred"
   Acceptance:
     kubeConfigSecretTextCredentialsId: "kymacred"
@@ -14,7 +14,7 @@ steps:
     filePath: "docker/Dockerfile"
 stages:
   Build:
-    kanikoExecute: true
+    kanikoExecute: false
   Acceptance:
     kubernetesDeploy: true
     deployTool: "kubectl"

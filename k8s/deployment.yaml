@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: fe-ui5-mssql
-          image: afdendy/fe-ui5-mssql
+          image: afdendy/fe-ui5-mssql:linux
           imagePullPolicy: Always
           ports:
             - name: http
