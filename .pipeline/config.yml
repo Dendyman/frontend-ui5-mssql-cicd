@@ -11,7 +11,8 @@ service:
   stages:
     Acceptance:
       runFirst:
-        command: "kubectl krew install oidc-login"
+        command: "apt-get install brew -y"
+        command: "brew install int128/kubelogin/kubelogin"
 steps:
   kanikoExecute:
     dockerfilePath: "docker/Dockerfile"
