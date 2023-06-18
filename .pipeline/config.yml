@@ -1,6 +1,7 @@
 general:
   buildTool: "docker"
   containerImageName: "afdendy/fe-ui5-mssql"
+  containerImageTag: "linux"
   containerRegistryUrl: "https://hub.docker.com/repositories/afdendy"
 service:
   automaticVersioning: false
