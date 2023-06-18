@@ -8,11 +8,6 @@ service:
   dockerConfigJsonSecretTextCredentialsId: "dockercred"
   Acceptance:
     kubeConfigSecretTextCredentialsId: "kymacred"
-  stages:
-    Acceptance:
-      runFirst:
-        command: "apt-get install brew -y"
-        command: "brew install int128/kubelogin/kubelogin"
 steps:
   kanikoExecute:
     dockerfilePath: "docker/Dockerfile"
