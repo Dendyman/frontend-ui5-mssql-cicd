@@ -19,7 +19,7 @@ stages:
   Acceptance:
     kubernetesDeploy: true
     deployTool: "kubectl"
-    namespace: "mytest"
+    namespace: "dev"
     createDockerRegistrySecret: false
     appTemplate: "k8s/deployment.yaml"
     deployCommand: "apply"
