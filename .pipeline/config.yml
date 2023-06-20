@@ -22,12 +22,12 @@ stages:
     kubernetesDeploy: true
     deployTool: "kubectl"
     namespace: "dev"
-    appTemplate: "k8s/deployment.yaml,k8s/apirule.yaml,k8s/configmap.yaml"
+    appTemplate: "k8s/deployment.yaml, k8s/apirule.yaml, k8s/configmap.yaml"
     deployCommand: "apply"
   Release:
     kubernetesDeploy: true
     deployTool: "kubectl"
     namespace: "prod"
     createDockerRegistrySecret: false
-    appTemplate: "k8s/deployment.yaml,k8s/apirule.yaml,k8s/configmap.yaml"
+    appTemplate: "k8s/deployment.yaml, k8s/apirule.yaml, k8s/configmap.yaml"
     deployCommand: "apply"
