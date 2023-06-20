@@ -8,6 +8,8 @@ service:
   dockerConfigJsonSecretTextCredentialsId: "dockercred"
   Acceptance:
     kubeConfigSecretTextCredentialsId: "kymacred"
+  Release:
+    kubeConfigSecretTextCredentialsId: "mykymacred"
 steps:
   kanikoExecute:
     dockerfilePath: "docker/Dockerfile"
@@ -20,8 +22,12 @@ stages:
     kubernetesDeploy: true
     deployTool: "kubectl"
     namespace: "dev"
-    createDockerRegistrySecret: false
-    appTemplate: "k8s/deployment.yaml"
+    appTemplate: "k8s/deployment.yaml,k8s/apirule.yaml,k8s/configmap.yaml"
     deployCommand: "apply"
   Release:
-    kubernetesDeploy: false
+    kubernetesDeploy: true
+    deployTool: "kubectl"
+    namespace: "prod"
+    createDockerRegistrySecret: false
+    appTemplate: "k8s/deployment.yaml,k8s/apirule.yaml,k8s/configmap.yaml"
+    deployCommand: "apply"

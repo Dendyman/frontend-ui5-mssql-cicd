@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fe-ui5-mssql
+  name: fe-ui5-mssql-my
   labels:
-    app: fe-ui5-mssql
+    app: fe-ui5-mssql-my
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fe-ui5-mssql
+      app: fe-ui5-mssql-my
   template:
     metadata:
       labels:
-        app: fe-ui5-mssql
+        app: fe-ui5-mssql-my
     spec:
       containers:
-        - name: fe-ui5-mssql
+        - name: fe-ui5-mssql-my
           image: afdendy/fe-ui5-mssql:linux
           imagePullPolicy: Always
           ports:
@@ -28,17 +28,17 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: fe-ui5-mssql
+            name: fe-ui5-mssql-my
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: fe-ui5-mssql
+  name: fe-ui5-mssql-my
   labels:
-    app: fe-ui5-mssql
+    app: fe-ui5-mssql-my
 spec:
   ports:
     - name: http
       port: 80
   selector:
-    app: fe-ui5-mssql
+    app: fe-ui5-mssql-my
