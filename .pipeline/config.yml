@@ -2,7 +2,7 @@ general:
   buildTool: "docker"
   containerImageName: "afdendy/fe-ui5"
   containerImageTag: "linux"
-  containerRegistryUrl: "hub.docker.com"
+  containerRegistryUrl: "docker.io"
 service:
   automaticVersioning: false
   dockerConfigJsonSecretTextCredentialsId: "dockercred"
