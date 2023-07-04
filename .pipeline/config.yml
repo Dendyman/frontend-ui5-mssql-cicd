@@ -5,7 +5,7 @@ general:
   containerRegistryUrl: "https://hub.docker.com"
 service:
   automaticVersioning: false
-  dockerConfigJsonSecretTextCredentialsId: "dockercred"
+  dockerConfigJsonSecretTextCredentialsId: "dckrlgn"
   Acceptance:
     kubeConfigSecretTextCredentialsId: "kymacred"
   Release:
