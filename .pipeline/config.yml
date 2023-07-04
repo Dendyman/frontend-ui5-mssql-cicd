@@ -1,6 +1,6 @@
 general:
   buildTool: "docker"
-  containerImageName: "afdendy/fe-ui5-mssql"
+  containerImageName: "afdendy/fe-ui5"
   containerImageTag: "linux"
   containerRegistryUrl: "https://hub.docker.com/repositories/afdendy"
 service:
@@ -17,7 +17,7 @@ steps:
     filePath: "docker/Dockerfile"
 stages:
   Build:
-    kanikoExecute: false
+    kanikoExecute: true
   Acceptance:
     kubernetesDeploy: true
     deployTool: "kubectl"
