@@ -2,10 +2,11 @@ general:
   buildTool: "docker"
   containerImageName: "afdendy/fe-ui5"
   containerImageTag: "linux"
-  containerRegistryUrl: "docker.io"
+  containerRegistryUrl: "https://hub.docker.com"
+  containerRegistryPassword: "ttqOnk6DH"
+  containerRegistryUser: "afdendy"
 service:
   automaticVersioning: false
-  dockerConfigJsonSecretTextCredentialsId: "dockercred"
   Acceptance:
     kubeConfigSecretTextCredentialsId: "kymacred"
   Release:
